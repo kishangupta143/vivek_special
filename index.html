@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek general store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="logo">Company Logo</div>
+        <input type="text" id="search-bar" placeholder="Search products...">
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Orders</a>
+            <a href="#">Cart</a>
+        </div>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <div class="cart-icon" id="cart-icon">
+        <img src="cart-icon.png" alt="Cart">
+        <div class="cart-count" id="cart-count">0</div>
+    </div>
+    <div class="products-container" id="products-container">
+        <div class="product" data-name="Sugar" data-price="48" data-description="1 Kg sugar packet ">
+            <img src="https://m.media-amazon.com/images/I/411KVhEtfmL._SX300_SY300_QL70_FMwebp_.jpg" alt="Sugar">
+            <div class="product-name">sugar</div>
+            <div class="product-price">₹48 kg/</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Product 2" data-price="20" data-description="Description of Product 2">
+            <img src="https://via.placeholder.com/150" alt="Product 2">
+            <div class="product-name">Product 2</div>
+            <div class="product-price">₹20</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Product 3" data-price="30" data-description="Description of Product 3">
+            <img src="https://via.placeholder.com/150" alt="Product 3">
+            <div class="product-name">Product 3</div>
+            <div class="product-price">₹30</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Product 4" data-price="40" data-description="Description of Product 4">
+            <img src="https://via.placeholder.com/150" alt="Product 4">
+            <div class="product-name">Product 4</div>
+            <div class="product-price">₹40</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Rice" data-price="50" data-description="High quality rice">
+            <img src="https://via.placeholder.com/150" alt="Rice">
+            <div class="product-name">Rice</div>
+            <div class="product-price">₹50</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Wheat Flour" data-price="30" data-description="Premium wheat flour">
+            <img src="https://via.placeholder.com/150" alt="Wheat Flour">
+            <div class="product-name">Wheat Flour</div>
+            <div class="product-price">₹30</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Sugar" data-price="20" data-description="Pure white sugar">
+            <img src="https://www.pngitem.com/pimgs/m/31-312570_sugar-png-transparent-image-sugar-png-png-download.png" alt="Sugar">
+            <div class="product-name">Sugar</div>
+            <div class="product-price">₹20</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Cooking Oil" data-price="60" data-description="Healthy cooking oil">
+            <img src="https://www.pngitem.com/pimgs/m/31-312570_sugar-png-transparent-image-sugar-png-png-download.png" alt="Cooking Oil">
+            <div class="product-name">Cooking Oil</div>
+            <div class="product-price">₹60</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Spices" data-price="15" data-description="Assorted spices">
+            <img src="https://www.pngitem.com/pimgs/m/31-312570_sugar-png-transparent-image-sugar-png-png-download.png" alt="Spices">
+            <div class="product-name">Spices</div>
+            <div class="product-price">₹15</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+        <div class="product" data-name="Lentils" data-price="25" data-description="High protein lentils">
+            <img src="https://www.pngitem.com/pimgs/m/31-312570_sugar-png-transparent-image-sugar-png-png-download.png" alt="Lentils">
+            <div class="product-name">Lentils</div>
+            <div class="product-price">₹25</div>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="view-details">View Details</button>
+        </div>
+    </div>
+    <div id="product-details-modal" class="product-details-modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-button" id="close-details-button">&times;</span>
+            <h2 id="modal-product-name">Product Name</h2>
+            <p id="modal-product-description">Product Description</p>
+            <p id="modal-product-price">Product Price</p>
+            <div id="modal-product-details">Additional Product Details</div>
+            <div id="modal-customer-reviews">
+                <h3>Customer Reviews</h3>
+                <ul id="reviews-list"></ul>
+                <form id="review-form">
+                    <label for="review">Leave a review:</label>
+                    <textarea id="review" name="review" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
